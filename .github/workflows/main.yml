@@ -18,4 +18,4 @@ jobs:
       - name: Deploy to gh-pages
         uses: crazy-max/ghaction-github-pages@v2.1.0
         with:
-          build_dir: .build
+          build_dir: ./build
