@@ -22,6 +22,7 @@
     <list default="true" id="8e291339-ce78-4b36-8997-f0ae4a7d0173" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594807423483</updated>
-      <workItem from="1594807424706" duration="6151000" />
+      <workItem from="1594807424706" duration="7432000" />
     </task>
     <servers />
   </component>
@@ -77,5 +78,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2566" y="268" width="627" height="544" key="find.popup" timestamp="1594819120441">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2566" y="268" width="627" height="544" key="find.popup/64.27.1856.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1594819120441" />
   </component>
 </project>

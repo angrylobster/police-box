@@ -24,3 +24,8 @@ jobs:
         env:
           github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: ${{ github.repository }}
+  deploy:
+    steps:
+      - run: |
+        echo "hello there"
+        npm run hello
