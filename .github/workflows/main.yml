@@ -16,8 +16,7 @@ jobs:
       - name: Run the React.js build script
         run: npm run build
       - name: Deploy to gh-pages
-        uses: crazy-max/ghaction-github-pages@v2.1.0
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          build_dir: ./build
-        env:
-          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          publish_dir: ./build
