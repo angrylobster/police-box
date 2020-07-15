@@ -25,6 +25,7 @@ jobs:
           github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: ${{ github.repository }}
   deploy:
+    runs-on: ubuntu-latest
     steps:
       - run: |
         echo "hello there"
