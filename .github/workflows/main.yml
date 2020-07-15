@@ -11,5 +11,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - name: Run hello world npm script
-        run: npm run hello
+      - name: Install packages
+        run: npm install --only=prod
