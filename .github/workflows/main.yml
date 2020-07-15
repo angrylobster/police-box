@@ -15,15 +15,11 @@ jobs:
         run: npm install --only=prod
       - name: Run the React.js build script
         run: npm run build
-      - name: Deploy to gh-pages
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.name "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://${github_token}@github.com/${repository}
-          npm run deploy
-        env:
-          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: ${{ github.repository }}
+      - name: Archive built files
+        uses: actions/upload-artifact@master
+        with:
+          name: react-build
+          path: build
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -33,7 +29,19 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - name: Test step
+      - name: Install gh-pages
         run: |
-          echo "hello there"
-          npm run hello
+          npm install gh-pages
+      - name: Deploy to gh-pages
+        uses: actions/download-artifact@master
+        with:
+          name: react-build
+          path: build
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.name "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://${github_token}@github.com/${repository}
+          npm run deploy
+        env:
+          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: ${{ github.repository }}
