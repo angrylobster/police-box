@@ -33,6 +33,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - run: |
-        echo "hello there"
-        npm run hello
+      - name: Test step
+        run: |
+          echo "hello there"
+          npm run hello
