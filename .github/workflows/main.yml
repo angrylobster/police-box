@@ -1,7 +1,7 @@
 name: police-box
 on:
   push:
-    branches: [ master, ci-test ]
+    branches: [ master ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,7 +41,6 @@ jobs:
         run: |
           npm install gh-pages
       - name: Deploy to gh-pages
-        if: steps.extract_branch.outputs.branch == 'master'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.name "github-actions[bot]@users.noreply.github.com"
