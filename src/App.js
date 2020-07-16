@@ -10,7 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload!
         </p>
-        <p>My API_KEY is {process.env.API_KEY}</p>
+        <p>My API_KEY is {JSON.stringify(process.env)}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
