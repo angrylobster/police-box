@@ -21,6 +21,8 @@ jobs:
           name: react-build
           path: build
   deploy:
+    branches:
+      - master
     needs: build
     runs-on: ubuntu-latest
     steps:
